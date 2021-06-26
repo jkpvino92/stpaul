@@ -1,0 +1,30 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Ewoke 04
+ * Date: 13-Dec-2018
+ * Time: 12:15 PM
+ */
+
+
+
+?>
+<div class="store-info strip">
+    <div class="container">
+        <ul class="strip-list">
+            <li><a href="/publications">Publication</a></li>
+            <li><a href="/distribution">Distribution</a></li>
+            <li><a href="/parish-bulletins">Parish Bulletins</a></li>
+            <li><a href="/parish">Parish</a></li>
+            <li><a href="/school">Schools</a></li>
+        </ul>
+        <a href="tel:<?php echo $block->getPhoneNumber();?>" class="call"><i class="fa fa-phone" aria-hidden="true"></i><span><?php echo $block->getPhoneNumber();?></span></a>
+    </div>
+</div>
+<script>
+    require(['jquery'],function($){
+        $(document).ready(function(){
+            //$('.panel.header').toggleClass('open');
+        });
+    });
+</script>

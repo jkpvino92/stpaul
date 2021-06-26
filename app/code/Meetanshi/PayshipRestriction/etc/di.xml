@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Payment\Model\PaymentMethodList">
+        <plugin name="restrict" type="Meetanshi\PayshipRestriction\Plugin\RestrictPaymentMethods" sortOrder="1"
+                disabled="false"/>
+    </type>
+    <type name="Magento\Shipping\Model\Rate\Result">
+        <plugin name="shippingrules_update_rates"
+                type="Meetanshi\PayshipRestriction\Model\Rewrite\GetAllRates"
+                sortOrder="11"
+                disabled="false"/>
+    </type>
+
+    <preference for="Meetanshi\PayshipRestriction\Api\CustomerGroupInterface" type="Meetanshi\PayshipRestriction\Model\Api\CustomerGroup"/>
+</config>

@@ -1,0 +1,29 @@
+<?php
+	$categories = $this->getCategoryCollection();
+	$canShowImg = $this->canShowImage();
+	$title = $block->getTitle() ? __($block->getTitle()) : 'Categories';
+?>
+<?php if ($title):?>
+<div class="block-title">
+	<strong><?php echo $block->escapeHtml($title) ?></strong>
+</div>
+<?php endif ?>
+<div class="block-content catalog-category">
+<?php foreach($categories as $category):?>
+        <span class="category">
+
+<img src="<?php echo $block->escapeUrl($category->getCategoryImage()) ?>" alt="" />
+            <a href="<?php echo $block->escapeUrl($category->getUrl()) ?>">
+        		<?php if($category->getImageUrl()):?>
+        			<img src="<?php echo $block->escapeUrl($category->getImageUrl()) ?>" alt="" />
+        		<?php else:?>
+        		<span class="cat-title"><?php echo $block->escapeHtml($category->getName()) ?><?php echo 'img'.$category->getCategoryImage(); ?></span>
+        		<?php endif;?>
+        	</a>
+        </span>
+        <?php
+endforeach;
+?>
+</div>
+
+

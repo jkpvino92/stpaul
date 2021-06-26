@@ -1,0 +1,233 @@
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <update handle="default_head_blocks"/>
+
+    <body>
+
+        <block name="require.js" class="Magento\Framework\View\Element\Template" template="Magento_Theme::page/js/require_js.phtml" />
+
+        <referenceContainer name="after.body.start">
+
+            <block class="Magento\RequireJs\Block\Html\Head\Config" name="requirejs-config"/>
+
+            <block class="Magento\Translation\Block\Html\Head\Config" name="translate-config"/>
+
+            <block class="Magento\Translation\Block\Js" name="translate" template="Magento_Translation::translate.phtml"/>
+
+            <block class="Magento\Framework\View\Element\Js\Cookie" name="js_cookies" template="Magento_Theme::js/cookie.phtml"/>
+
+            <block class="Magento\Theme\Block\Html\Notices" name="global_notices" template="Magento_Theme::html/notices.phtml"/>
+
+        </referenceContainer>
+
+        <referenceBlock name="top.links">
+
+            <block class="Magento\Theme\Block\Html\Header" name="header" as="header" before="-">
+
+                <arguments>
+
+                    <argument name="show_part" xsi:type="string">welcome</argument>
+
+                </arguments>
+
+            </block>
+
+        </referenceBlock>
+
+        <referenceContainer name="main.content">
+
+            <block class="Magento\Framework\View\Element\Template" name="skip_to_content.target" before="-" template="Magento_Theme::html/skiptarget.phtml">
+
+                <arguments>
+
+                    <argument name="target_id" xsi:type="string">contentarea</argument>
+
+                </arguments>
+
+            </block>
+
+        </referenceContainer>
+
+        <referenceBlock name="footer_links" remove="true" />
+
+        <referenceBlock name="report.bugs" remove="true" />
+
+        <referenceBlock name="form.subscribe" remove="true"/>
+
+        <referenceBlock name="navigation.sections" remove="true"/>
+
+        <referenceBlock name="header" remove="true"/>
+
+
+        <referenceContainer name="header.container">
+
+            <container name="header.panel.wrapper" htmlClass="panel wrapper" htmlTag="div" before="-">
+
+                <container name="header.panel" label="Page Header Panel" htmlTag="div" htmlClass="panel header" before="-">
+
+                    <container name="header.top" label="Page Header Top" htmlTag="div" htmlClass="header-top">
+
+                        <container name="leftbox" htmlClass="leftbox" htmlTag="div" before="rightbox">
+
+                            <block class="Ewoke\Theme\Block\Html\Header\Bar" name="bar" template="Magento_Theme::html/header/bar.phtml"/>
+
+                        </container>
+
+
+                    </container>
+
+                </container>
+
+                <container name="header-wrapper" label="Page Header" as="header-wrapper" htmlTag="div" htmlClass="header content">
+
+
+                    <!--logo dic start-->
+
+                    <container name="logo-wrapper" label="Logo Section" htmlTag="div" htmlClass="logo-wrapper">
+
+                        <container name="logo-common-wrapper" label="Logo Common" htmlTag="div" htmlClass="container">
+
+
+                        <container name="logo-main" label="Logo Section" htmlTag="div" htmlClass="logo-main">
+
+                            <block class="Magento\Theme\Block\Html\Header\Logo" name="logo">
+
+                                <arguments>
+
+                                    <argument name="logo_img_width" xsi:type="number">189</argument>
+
+                                    <argument name="logo_img_height" xsi:type="number">64</argument>
+
+                                </arguments>
+
+                            </block>
+                        </container>
+
+                        <container name="rightbox" htmlClass="rightbox" htmlTag="div" after="account-nav">
+                            <block class="Magento\Framework\View\Element\Template" name="top.search" as="topSearch" template="Magento_Search::form.mini.phtml">
+                                <arguments>
+                                    <argument name="configProvider" xsi:type="object">Magento\Search\ViewModel\ConfigProvider</argument>
+                                </arguments>
+                            </block>
+                        </container>
+
+                        <block class="Ewoke\Theme\Block\Html\Header\Accountlinks" name="top.account" as="topAccount" template="Magento_Theme::html/header/accountlinks.phtml"/>
+                            <block class="Magento\Directory\Block\Currency" name="store.settings.currency" template="Magento_Directory::currency.phtml"/>
+                        </container>
+
+
+                    </container>
+                    <!--logo end start-->
+
+                    <!--top menu start-->
+
+                    <container name="top-menu" label="Top Menu" htmlTag="div" htmlClass="top-menu">
+
+                        <container name="top-common-menu" label="top Common" htmlTag="div" htmlClass="container">
+
+                        <block class="Magento\Framework\View\Element\Template" name="store.menu" group="navigation-sections" template="Magento_Theme::html/container.phtml">
+
+                            <arguments>
+
+                                <argument name="title" translate="true" xsi:type="string">Menu</argument>
+
+                            </arguments>
+
+
+                            <block class="Magiccart\Magicmenu\Block\Menu" name="catalog.topnav" template="aio-topmenu.phtml">
+                                <block class="Magento\Theme\Block\Html\Topmenu" name="catalog.topnav.default" template="Magento_Theme::html/topmenu.phtml"/>
+                            </block>
+
+                        </block>
+
+                        </container>
+
+                    </container>
+
+                    <!--top menu end-->
+
+                </container>
+
+            </container>
+
+        </referenceContainer>
+
+
+        <referenceContainer name="columns.top">
+
+            <block class="Magento\Theme\Block\Html\Title" name="page.main.title" template="Magento_Theme::html/title.phtml"/>
+
+            <container name="page.messages" htmlTag="div" htmlClass="page messages">
+
+                <block class="Magento\Framework\View\Element\Template" name="ajax.message.placeholder" template="Magento_Theme::html/messages.phtml"/>
+
+                <block class="Magento\Framework\View\Element\Messages" name="messages" as="messages" template="Magento_Theme::messages.phtml"/>
+
+            </container>
+
+        </referenceContainer>
+
+
+        <move element="minicart" destination="rightbox" after="top.account" />
+        <move element="top.account" destination="rightbox"  before="minicart" />
+
+        <referenceContainer name="page.bottom.container">
+
+            <container name="page.bottom" label="Before Page Footer" htmlTag="div" htmlClass="content">
+
+                <!--<block class="Magento\Cms\Block\Block" name="secure">-->
+
+                <!--<arguments>-->
+
+                <!--<argument name="block_id" xsi:type="string">ewoke_secure</argument>-->
+
+                <!--</arguments>-->
+
+                <!--</block>-->
+
+            </container>
+
+        </referenceContainer>
+
+        <referenceContainer name="footer-container">
+
+            <block class="Ewoke\Theme\Block\Html\Footer" name="footer" as="footer" template="Magento_Theme::html/footer.phtml"/>
+
+        </referenceContainer>
+
+        <!--<container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">-->
+
+        <!--<block class="Ewoke\Theme\Block\Html\Footersection" name="footer" as="footer" template="Magento_Theme::html/footer.phtml"/>-->
+
+        <!--</container>-->
+
+        <!--<move element="footer" destination="footer-container" after="footer" />-->
+
+        <!--<move element="copyright" destination="footer-container" after="footer" />-->
+
+
+
+        <!-- Downloadable product link -->
+
+<!--        <referenceBlock name="customer-account-navigation-downloadable-products-link" remove="true"/>-->
+
+
+        <!-- Billing agreement link -->
+
+        <referenceBlock name="customer-account-navigation-billing-agreements-link" remove="true"/>
+
+        <!-- My credit card link -->
+
+        <referenceBlock name="customer-account-navigation-my-credit-cards-link" remove="true"/>
+
+        <!-- Product review link -->
+
+        <referenceBlock name="customer-account-navigation-product-reviews-link" remove="true"/>
+
+
+
+
+
+    </body>
+
+</page>

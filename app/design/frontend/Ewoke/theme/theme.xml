@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * 
+ * Location app/design/frontend/Atwix/custom/theme.xml
+ *
+ * @author Atwix Team
+ * @copyright Copyright (c) 2016 Atwix (https://www.atwix.com/)
+ * @package Ewoke_Theme
+ */
+
+-->
+<theme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/theme.xsd">
+   <title>Ewoke Theme</title>
+    <parent>Magento/blank</parent>
+    <media>
+        <preview_image>media/preview.png</preview_image>
+    </media>
+
+    <images module="Magento_Catalog">
+        <image id="category_page_list" type="small_image">
+            <width>240</width>
+            <height>320</height>
+            <transparency>false</transparency>
+            <aspect_ratio>false</aspect_ratio>
+            <frame>false</frame>
+        </image>
+    </images>
+</theme>

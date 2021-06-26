@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <css src="mage/calendar.css"/>
+        <css src="css/custom.css"/>
+        <script src="requirejs/require.js"/>
+        <!--<script src="js/SmoothScroll.js"/>-->
+        <script src="js/ewokeTheme.js"/>
+        <css src="css/font-awesome.min.css" />
+        <css src="css/print.css" media="print" />
+        <!--<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"/>-->
+        <link src="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900" rel="stylesheet" src_type="url" />
+        <!--<link rel="stylesheet" type="text/css"  media="all" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" src_type="url" />-->
+        <!-- <meta property="og:url"           content="https://www.stpauls.ie/" />
+        <meta property="og:type"          content="website" />
+        <meta property="og:title"         content="St Pauls online store  - books, CDs, DVDs, gift items, religious artefacts, Bibles and biblical studies" />
+        <meta property="og:description"   content="St Pauls online store  - books, CDs, DVDs, gift items, religious artefacts, Bibles and biblical studies" />
+        <meta property="og:image"         content="https://www.stpauls.ie/pub/static/version1582782702/frontend/Ewoke/theme/en_US/images/fb_share.jpg" /> -->
+    </head>
+    <body>
+        <referenceContainer name="after.body.start">
+            <block class="Magento\Framework\View\Element\Js\Components" name="head.components" as="components" template="Magento_Theme::js/components.phtml" before="-"/>
+            <block class="Magento\Framework\View\Element\Template" name="cookie-status-check" as="cookie-status" template="Magento_Theme::js/cookie_status.phtml" />
+        </referenceContainer>
+    </body>
+</page>

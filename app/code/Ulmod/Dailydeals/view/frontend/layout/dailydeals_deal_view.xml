@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Ulmod. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">   
+ <body>    
+    <referenceBlock name="content">
+             <block class="Ulmod\Dailydeals\Block\Deal\View" name="um_dailydeals"/>
+             <block class="Ulmod\Dailydeals\Block\Main" name="category.products.list" as="product_list" template="Ulmod_Dailydeals::list.phtml">
+            </block>
+        </referenceBlock>
+    </body>
+</page>  

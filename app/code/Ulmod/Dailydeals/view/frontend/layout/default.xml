@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Ulmod. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Ulmod_Dailydeals::css/font-awesome.css"/>
+    </head>
+    <body>
+		<referenceBlock name="header.links">
+			<block class="Ulmod\Dailydeals\Block\TopLink" name="top-dailydeals-link" >
+				<arguments>
+					<argument name="label" xsi:type="string" translate="true">Daily Deals</argument>
+					<argument name="path" xsi:type="string">dailydeals/deal/view</argument>
+				</arguments>
+			</block>
+		</referenceBlock>
+		<referenceBlock name="footer_links">
+			<block class="Ulmod\Dailydeals\Block\FooterLink" name="footer-dailydeals-link" >
+				<arguments>
+					<argument name="label" xsi:type="string" translate="true">Daily Deals</argument>
+					<argument name="path" xsi:type="string">dailydeals/deal/view</argument>
+				</arguments>
+			</block>
+		</referenceBlock>
+		<!-- <referenceContainer name="sidebar.additional">
+			<block class="Ulmod\Dailydeals\Block\Sidebar" name="um_dailydeals_deals_sidebar" template="Ulmod_Dailydeals::sidebar/list.phtml"/>
+		</referenceContainer> -->
+	</body>
+</page>

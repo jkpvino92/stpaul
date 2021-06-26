@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Ulmod. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Ulmod_Dailydeals::dailydeals" title="Daily Deals by Ulmod" module="Ulmod_Dailydeals" sortOrder="450" parent="Magento_Backend::marketing" resource="Ulmod_Dailydeals::dailydeals"/>
+        <add id="Ulmod_Dailydeals::dailydeal" title="Manage Daily Deals" module="Ulmod_Dailydeals" sortOrder="10" action="um_dailydeals/dailydeal" resource="Ulmod_Dailydeals::dailydeal" parent="Ulmod_Dailydeals::dailydeals"/>
+    </menu>
+</config>

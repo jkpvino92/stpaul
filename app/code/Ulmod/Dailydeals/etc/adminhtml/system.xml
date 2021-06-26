@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Ulmod. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="ulmod_extensions" translate="label" sortOrder="8888888">
+            <label>Ulmod Extensions</label>
+        </tab>		
+        <section id="um_dailydeal" translate="label" type="text" sortOrder="460" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Daily Deals</label>
+            <tab>ulmod_extensions</tab>
+            <resource>Ulmod_Dailydeals::config_dailydeals</resource>		
+            <group id="general" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>	
+			
+                <field id="is_enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Enabled</label>
+                    <comment>Id Yes, the extension will be enable in storefront</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="index_page" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Index Page</label>
+                <field id="title" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                    <comment>Please specify the title of the daily deals page.</comment>
+                </field>
+                <field id="meta_keywords" translate="label comment" type="textarea" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Meta Keywords</label>
+                </field>
+                <field id="meta_description" translate="label comment" type="textarea" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Meta Description</label>
+                </field>	
+            </group>			
+            <group id="links" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Links</label>
+                <field id="show_item_top" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display Deal In Top Links</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>                
+                <field id="item_text_top" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Link Text</label>
+                    <depends>
+                        <field id="show_item_top">1</field>
+                    </depends>                    
+                    <comment>Please define the link text to display in top links</comment>  
+                </field>
+                <field id="show_item_footer" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display Deal In Footer</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>                
+                <field id="item_text_footer" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Link Text</label>
+                    <depends>
+                        <field id="show_item_footer">1</field>
+                    </depends>                    
+                    <comment>Please define the link text to display in footer links</comment>  
+                </field>				
+            </group> 	
+            <group id="content" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>Content</label>
+                <field id="show_description" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Daily Deals Description</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field> 			
+                <field id="description" translate="label" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Description</label>
+                    <comment>Please define a description to show before the daily deals block. Useful to describe the page to user. 
+					this will show just before deals products block to describe the page</comment>
+                    <depends>
+                        <field id="show_description">1</field>
+                    </depends>						
+                </field>	
+                <field id="items_number" translate="label" type="text" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Maximun number of products on main page</label>
+                    <comment>Please specify the max  number of items to show in main daily deals page.</comment>
+					<validate>required-entry</validate>					
+                </field>				
+                <field id="show_countdown" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Show countdown timer?</label>
+                    <comment>If yes, the timer will show on each item in deal</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>	
+                <field id="countdown_label" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Countdown Label</label>
+                    <comment>Please specify the label to show before countdown block. Eg. 'Time left to buy'.</comment>
+                    <depends>
+                        <field id="show_countdown">1</field>
+                    </depends>					
+                </field>	
+            </group>
+            <group id="sidebar" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Sidebar</label>		
+                <field id="is_enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Show daily deal block in sidebar</label>
+                    <comment>If yes, the daily deals block will show on any page with 2 and 3 columns</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Block Title</label>
+                    <comment>Please specify the title of the daily deals in sidebar. Eg 'Deal of the Day'.</comment>
+                    <depends>
+                        <field id="is_enabled">1</field>
+                    </depends>					
+                </field>				
+                <field id="items_number" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Maximun number of products on sidebar</label>
+                    <comment>Please specify the max  number of items to show in sidebar.</comment>
+					<validate>required-entry</validate>
+                    <depends>
+                        <field id="is_enabled">1</field>
+                    </depends>					
+                </field>
+                <field id="show_countdown" translate="label comment" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Show countdown timer?</label>
+                    <comment>If yes, the timer will show on each item in deal. Please note that the timer won't show if the item is loaded twice on same page.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>	
+                <field id="countdown_label" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Countdown Label</label>
+                    <comment>Please specify the label to show before countdown block. Eg. 'Time left to buy'.</comment>
+                    <depends>
+                        <field id="show_countdown">1</field>
+                    </depends>					
+                </field>		
+            </group>
+        </section>
+    </system>
+</config>

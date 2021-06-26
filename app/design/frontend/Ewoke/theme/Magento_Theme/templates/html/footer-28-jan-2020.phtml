@@ -1,0 +1,221 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+// $config = new \Magento\Framework\App\Config\ScopeConfigInterface();
+
+// echo $config->getValue('general/store_information/name');
+?>
+
+
+<section class="site-features">
+        <div class="col-container">
+            <div class="inline col-3">
+                <div class="image"><img src="<?php echo $block->getViewFileUrl('images/icon-tele.png'); ?>" alt="img" /></div>
+                <div class="details">
+                    <h4>telesale</h4>
+                    <div>St Pauls offers you the option of making your purchases over the phone:
+                        <p>Call : <a href="tel:+353 162 85933">+353 162 85933</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="inline col-3">
+                <div class="image"><img src="<?php echo $block->getViewFileUrl('images/footer-cicon.png'); ?>" alt="img" /></div>
+                <div class="details">
+                    <h4>Contact</h4>
+                    <div>Through our contact page you can send us your questions.
+                        <p>Click <a href="/contact">here</a> to fill out the contact form.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="inline col-3">
+                <div class="image"><img src="<?php echo $block->getViewFileUrl('images/icon-customer.png'); ?>" alt="img" /></div>
+                <div class="details">
+                    <h4>Customer Enquiries</h4>
+                    <p>Our answering services work from <br /> 9 am to 5 pm ( Monday* to Saturday ). <br /> Except Bank holidays*.</p>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+<footer>
+    <div class="footer-content">
+        <div class="container">
+            <div class="col-container">
+                <div class="address">
+                    <div class="box">
+                        <h4>St Pauls</h4>
+                        <p>
+                            <?php echo $block->getStoreName();?> <br/> <?php echo $block->getStoreStreet1();?>
+                        </p>
+                        <br/>
+                        <br/>
+                        <p class="call"><img src="<?php echo $block->getViewFileUrl('images/call.png'); ?>" alt="img"><a href="tel:+353 16285933">+353 162 85933</a></p>
+                        <p class="mail"><img src="<?php echo $block->getViewFileUrl('images/mail.png'); ?>" alt="img"><a href="mailto:stpaulsirelandonline@gmail.com">stpaulsirelandonline@gmail.com</a></p>
+                    </div>
+
+                    <div class="select-search">
+                        <h4>St Pauls around the world:</h4>
+                        <ul class="categorySearch">
+                            <li><a href="https://stpauls.org.uk/" class="selected"><strong>United Kingdom</strong></a></li>
+                            <ul>
+                                <li><a target="_blank" href="http://www.san-pablo.com.ar/">Argentina</a></li>
+                                <li><a target="_blank" href="http://www.stpauls.com.au/">Australia</a></li>
+                                <li><a target="_blank" href="http://www.paulus.com.br/portal/">Brazil</a></li>
+                                <li><a target="_blank" href="http://mediaspaul.qc.ca/">Canada</a></li>
+                                <li><a target="_blank" href="http://www.san-pablo.cl/">Chile</a></li>
+                                <li><a target="_blank" href="http://sanpablo.com.co/">Colombia</a></li>
+                                <li><a target="_blank" href="http://www.mediaspaul.cd/">Congo</a></li>
+                                <li><a target="_blank" href="http://www.librairie-saintpaul.fr/">France</a></li>
+                                <li><a target="_blank" href="http://www.stpaulsice.com/">India</a></li>
+                                <li><a target="_blank" href="http://stpauls.ie/">Ireland</a></li>
+                                <li><a target="_blank" href="http://www.paolinitalia.it/">Italy</a></li>
+                                <li><a target="_blank" href="http://www.sanpaolo.or.jp/">Japan</a></li>
+                                <li><a target="_blank" href="http://paolo.kr/main/index">Korea</a></li>
+                                <li><a target="_blank" href="http://www.sanpablo.com.mx/tienda/">Mexico</a></li>
+                                <li><a target="_blank" href="http://www.sanpablo.com.py/">Paraguay</a></li>
+                                <li><a target="_blank" href="http://www.sanpabloperu.com.pe/">Peru</a></li>
+                                <li><a target="_blank" href="http://www.stpauls.ph/">Philippines</a></li>
+                                <li><a target="_blank" href="http://www.edycja.pl/">Poland</a></li>
+                                <li><a target="_blank" href="http://paulus.pt/">Portugal</a></li>
+                                <li><a target="_blank" href="http://sanpablo.es/">Spain</a></li>
+                                <li><a target="_blank" href="http://www.stpauls.us/">United States</a></li>
+                                <li><a target="_blank" href="http://www.san-pablo.com.uy/">Uruguay</a></li>
+                                <li><a target="_blank" href="http://www.sanpablo.org.ve/">Venezuela</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="links">
+                    <div class="box">
+                        <h4>About US</h4>
+                        <ul>
+                            <li><a href="/who-we-are/">Society of St Paul</a></li>
+                            <li><a href="/stpauls-distribution/">St Paul Distribution</a></li>
+                            <li><a href="/book-center/">St Paul Book Centers</a></li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h4>Portal</h4>
+                        <ul>
+                            <li><a href="#!">St Paul Publications</a></li>
+                            <li><a href="#!">Online Store</a></li>
+                            <li><a href="/school">Schools</a></li>
+                            <li><a href="/parish">Parishes</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="links">
+                    <div class="box">
+                        <h4>Service & Support</h4>
+                        <ul>
+                            <li><a href="/terms-and-condition">Terms and Conditions</a></li>
+                            <li><a href="/cookie-privacy-policy">Cookie and Privacy Policy</a></li>
+                            <li><a href="/delivery-options">Delivery options</a></li>
+                            <li><a href="/contact">Contact us</a></li>
+                            <li><a href="/blog">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="newsletter" style="display: none;">
+                    <div class="box">
+                        <h4>Sign up for email</h4>
+                        <p>Receive the latest updates about our products and promotions.</p>
+                        <div class="input-div">
+                            <?php  //echo $this->getLayout()->createBlock('Magento\Newsletter\Block\Subscribe')->setTemplate('Magento_Newsletter::subscribe.phtml')->toHtml(); ?>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h4>Follow us</h4>
+                        <ul class="social">
+                            <li><a href="https://www.facebook.com/stpaulsireland" class="facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="col-container">
+                <p>Copyright © ST Pauls Online Store <?php echo date('Y'); ?> All rights reserved. Designed and Developed by <a href="http://www.ewokesoft.com/">eWoke</a>.</p>
+                <p class="payment"><strong>FORMS OF PAYMENT:</strong><img src="<?php echo $block->getViewFileUrl('images/payment.png'); ?>" alt="payment" /></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="ssb-container" class="ssb-btns-right ssb-disable-on-mobile ssb-anim-slide">
+    <ul class="ssb-light-hover">
+        <li id="ssb-btn-0">
+            <p><a href="tel:+353 16285933" target="_blank"><span class="fa fa-phone"></span> +353 162 85933</a> </p>
+        </li>
+        <li id="ssb-btn-1">
+            <p><a href="mailto:stpaulsirelandonline@gmail.com" target="_blank"><span class="fa fa-envelope"></span> stpaulsirelandonline@gmail.com</a></p>
+        </li>
+        <li id="ssb-btn-2">
+            <p><a href="https://www.google.com/maps/place/Society+of+St+Paul/@53.3872501,-6.5966413,15z/data=!4m5!3m4!1s0x0:0x79ba9845362d9690!8m2!3d53.3872501!4d-6.5966413" target="_blank"><span class="fa fa-map-marker"></span> Stpauls Location</a></p>
+        </li>
+        <li class="ssb-share-btn">
+            <p>
+                <a href="javascript:;"><span class="fa fa-share-alt"></span> Social Share                                     </a>
+            </p>
+            <div class="ssb-social-popup">
+             <a target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?= $this->getUrl(); ?>','popup','width=600,height=600'); return false;" href="javascript:;" class="popup">
+                  <span class="rrssb-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29">
+                        <path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z"/></svg>
+                  </span><span class="st-label">Share</span>
+            </a>
+            <a target="popup" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=<?= $this->getUrl() ?>&amp;title=St Pauls Bookshop','popup','width=600,height=600'); return false;" href="javascript:;" class="popup">
+                  <span class="rrssb-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"><path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z"/></svg>
+                  </span><span class="st-label">Share</span>
+            </a>
+            <a target="popup" onclick="window.open('https://twitter.com/intent/tweet?text=<?= $this->getUrl() ?>','popup','width=600,height=600'); return false;" href="javascript:;" class="popup">
+                  <span class="rrssb-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"><path d="M24.253 8.756C24.69 17.08 18.297 24.182 9.97 24.62a15.093 15.093 0 0 1-8.86-2.32c2.702.18 5.375-.648 7.507-2.32a5.417 5.417 0 0 1-4.49-3.64c.802.13 1.62.077 2.4-.154a5.416 5.416 0 0 1-4.412-5.11 5.43 5.43 0 0 0 2.168.387A5.416 5.416 0 0 1 2.89 4.498a15.09 15.09 0 0 0 10.913 5.573 5.185 5.185 0 0 1 3.434-6.48 5.18 5.18 0 0 1 5.546 1.682 9.076 9.076 0 0 0 3.33-1.317 5.038 5.038 0 0 1-2.4 2.942 9.068 9.068 0 0 0 3.02-.85 5.05 5.05 0 0 1-2.48 2.71z"/></svg>
+                  </span><span class="st-label">Tweet</span>
+            </a>
+            <a target="popup" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?= $this->getUrl() ?>&amp;media=<?= $block->getViewFileUrl('images/socialshare.jpg'); ?>&amp;description=St Pauls Bookshop','popup','width=600,height=600'); return false;" href="javascript:;">
+                  <span class="rrssb-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"><path d="M14.02 1.57c-7.06 0-12.784 5.723-12.784 12.785S6.96 27.14 14.02 27.14c7.062 0 12.786-5.725 12.786-12.785 0-7.06-5.724-12.785-12.785-12.785zm1.24 17.085c-1.16-.09-1.648-.666-2.558-1.22-.5 2.627-1.113 5.146-2.925 6.46-.56-3.972.822-6.952 1.462-10.117-1.094-1.84.13-5.545 2.437-4.632 2.837 1.123-2.458 6.842 1.1 7.557 3.71.744 5.226-6.44 2.924-8.775-3.324-3.374-9.677-.077-8.896 4.754.19 1.178 1.408 1.538.49 3.168-2.13-.472-2.764-2.15-2.683-4.388.132-3.662 3.292-6.227 6.46-6.582 4.008-.448 7.772 1.474 8.29 5.24.58 4.254-1.815 8.864-6.1 8.532v.003z"/></svg>
+                  </span><span class="st-label">Pin</span>
+            </a>
+
+            </div>
+        </li>
+    </ul>
+</div>
+<!--Live Chat start-->
+<script type="text/javascript">function add_chatinline(){var hccid=44653440;var nt=document.createElement("script");nt.async=true;nt.src="https://mylivechat.com/chatinline.aspx?hccid="+hccid;var ct=document.getElementsByTagName("script")[0];ct.parentNode.insertBefore(nt,ct);}
+    add_chatinline(); </script>
+<!--Live Chat end-->
+<script>
+    require(['jquery'],function($){
+        $(document).ready(function(){
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 120) {
+                    $(".page-header").addClass('fix')
+                }
+                else {
+                    $(".page-header").removeClass('fix')
+                }
+                if ($(this).scrollTop() > 250) {
+                    $(".goto-top").addClass('open')
+                }
+                else {
+                    $(".goto-top").removeClass('open')
+                }
+            });
+            $(".goto-top").click(function () {
+                $("html, body").animate({scrollTop: 0}, 1000);
+            });
+        });
+    });
+</script>

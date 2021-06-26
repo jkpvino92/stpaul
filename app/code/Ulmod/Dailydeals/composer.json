@@ -1,0 +1,12 @@
+{
+    "name": "ulmod/module-dailydeals",
+    "description": "Daily Deals for Magento 2 by Ulmod",
+    "type": "magento2-module",
+    "version": "2.0.6",
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Ulmod\\Dailydeals\\": ""
+        }
+    }
+}

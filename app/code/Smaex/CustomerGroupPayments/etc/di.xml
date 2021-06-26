@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- Types -->
+
+    <type name="Magento\Payment\Model\Checks\SpecificationFactory">
+        <arguments>
+            <argument name="mapping" xsi:type="array">
+                <item name="smaex_can_use_for_customer_group" xsi:type="object">
+                    Smaex\CustomerGroupPayments\Model\Checks\CanUseForCustomerGroup
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Smaex\AdditionalPaymentChecks\Plugin\WhitelistAdditionalChecks">
+        <arguments>
+            <argument name="additionalChecks" xsi:type="array">
+                <item name="smaex_can_use_for_customer_group" xsi:type="string">
+                    smaex_can_use_for_customer_group
+                </item>
+            </argument>
+        </arguments>
+    </type>
+
+</config>

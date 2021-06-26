@@ -1,0 +1,40 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Ewoke 04
+ * Date: 18-Dec-2018
+ * Time: 12:05 PM
+ */
+?>
+<div class="main-footer">
+    <div class="footer-section">
+        <div class="footer-logo">
+            <img src="<?php echo $block->getLayout()->getBlock('logo')->getLogoSrc();?>" class="logo" />
+        </div>
+        <div class="footer-address">
+            <p>opposit NM Rpyale County<br/>
+            Medical Trust Collage Road<br/>
+            Irumbanam, Thripunithura, Kochi <br/>
+            0484-27769447<br/>
+            Customercare@hyperplanet.com</p>
+        </div>
+    </div>
+    <div class="footer-section">
+        <h3>About Us</h3>
+        <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('ewoke_footer_links')->toHtml();?>
+    </div>
+    <div class="footer-section">
+        <h3>Top Categories</h3>
+        <ul class="footer links">
+            <?php // get current store’s categories
+                $categories = $block->getStoreCategories();
+                foreach ($categories as $category) {
+                    echo '<li class="nav item"><a href="'.$category->getUrl().'">'.$category->getName().'</a></li>';
+                }
+            ?>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <?php  echo $this->getLayout()->createBlock("Magento\Newsletter\Block\Subscribe")->setTemplate("Magento_Newsletter::subscribe.phtml")->toHtml(); ?>
+    </div>
+</div>

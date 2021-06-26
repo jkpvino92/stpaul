@@ -1,0 +1,31 @@
+<?php
+//@codingStandardsIgnoreFile
+
+/** @var \Mirasvit\Blog\Block\Post\View $block */
+$post = $block->getPost();
+?>
+
+<div class="blog__post-view">
+
+    <header class="blog__post-header">
+        <h2 class="blog__post-title" itemprop="headline"><?= $post->getName() ?> </h2>
+
+        <?= $this->getPostMetaHeader()->toHtml() ?>
+    </header>
+
+
+
+    <?php if ($post->getFeaturedImageUrl()): ?>
+        <img src="<?= $post->getFeaturedImageUrl() ?>"  alt="<?= $post->getName() ?>" class="blog__post-featured-image"/>
+    <?php endif ?>
+
+    <?= $block->getPostContent() ?>
+
+    <?= $this->getPostMetaFooter()->toHtml() ?>
+
+    <?= $this->getChildHtml('blog.post.related.posts') ?>
+
+    <?= $this->getChildHtml('blog.post.related.products') ?>
+
+    <?= $this->getChildHtml('blog.post.comments') ?>
+</div>

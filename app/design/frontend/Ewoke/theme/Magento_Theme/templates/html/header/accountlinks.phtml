@@ -1,0 +1,50 @@
+<?php
+if($block->isLoggedIn()){ ?>
+
+    <?php
+    $customerData = $block->getCustomerData();
+    ?>
+
+    <?php
+    $om = \Magento\Framework\App\ObjectManager::getInstance();
+    $customerSession = $om->get('Magento\Customer\Model\Session');
+    if($customerSession->isLoggedIn()) { ?>
+    <div class="account-nav-section">
+        <div id="account-nav" class="account-nav">
+            <a href="<?php echo $block->getBaseUrl();?>customer/account/">
+                <img src="<?php echo $block->getViewFileUrl('images/login-user.png'); ?>" alt="user icon">
+                </a>
+            <div class="content">
+                <a href="<?php echo $block->getBaseUrl();?>customer/account/login/"><?php echo $customerSession->getCustomer()->getFirstname();  ?></a>
+                <a href="<?php echo $block->getBaseUrl();?>customer/account/" class="strong">Account</a>
+            </div>
+            <!-- Drop down Menu -->
+            <ul class="account-links">
+                <li><a href="<?php echo $block->getBaseUrl();?>customer/account/">My Account</a></li>
+                <li><a href="<?php echo $block->getBaseUrl();?>sales/order/history/">My Orders</a></li>
+                <li><a href="<?php echo $block->getBaseUrl();?>wishlist/">My Wish List</a></li>
+                <li><a href="<?php echo $block->getBaseUrl();?>customer/account/logout">Logout</a></li>
+            </ul>
+            <!-- Drop down Menu /-->
+        </div>
+    </div>
+    <?php } ?>
+<?php  }else{ ?>
+	<div class="account-nav-section">
+        <div id="account-nav" class="account-nav">
+            <a href="<?php echo $block->getBaseUrl();?>customer/account/login/">
+            <img src="<?php echo $block->getViewFileUrl('images/user.png'); ?>" alt="user icon">
+             </a>
+           <div class="content">
+            <a href="<?php echo $block->getBaseUrl();?>customer/account/login/">Login</a>
+            <a href="<?php echo $block->getBaseUrl();?>customer/account/create/" class="strong">Register</a>
+           </div>
+        </div>
+    </div>
+<?php } ?>
+
+<script>
+    require(['jquery'],function($){
+
+    });
+</script>

@@ -1,0 +1,52 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2019 Amasty (https://www.amasty.com)
+ * @package Amasty_PushNotifications
+ */
+?>
+<?php /** @var \Amasty\PushNotifications\Block\CustomPrompt $block */ ?>
+
+<div class="am-notification-wrapper">
+    <span class="am-close"></span>
+    <div class="am-notification">
+        <p class="am-message">
+            <?= /* @escapeNotVerified */ $block->getCustomPromptContent(); ?>
+        </p>
+        <div class="am-answer-wrapper">
+            <span class="am-defer">
+                <?= /* @escapeNotVerified */ __('Remind me later'); ?>
+            </span>
+            <button class="am-submit" id="am-submit">
+                <?= /* @escapeNotVerified */ __('Allow'); ?>
+            </button>
+        </div>
+    </div>
+
+    <div class="am-success-wrapper">
+        <div class="am-success-message">
+            <span class="am-success-icon"></span>
+            <p class="am-message">
+                <?= /* @escapeNotVerified */ __('Thank you! Please check your email inbox to confirm.'); ?>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="am-notification-error">
+    <span class="am-close"></span>
+    <div class="am-error-message">
+        <span class="am-error-icon"></span>
+        <p class="am-message">
+            <?= /* @escapeNotVerified */ $block->getErrorMessage(); ?>
+        </p>
+    </div>
+</div>
+
+
+<script type="text/x-magento-init">
+<?= /* @noEscape */ \Zend_Json_Encoder::encode([
+        '*' => ['Amasty_PushNotifications/js/custom_prompt' => $block->getJsConfig()],
+    ]);
+?>
+</script>

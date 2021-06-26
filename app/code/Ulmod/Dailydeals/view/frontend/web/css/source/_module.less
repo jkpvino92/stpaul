@@ -1,0 +1,482 @@
+/***** bundle, grouped and other products ****/
+/**** product view page *****/
+/* Countdown for other pages */
+#um-dailydeal-items {
+	.product-item-info {
+		display: block;
+		width: 240px;
+	}
+	.product-item {
+		display: inline-block;
+		position: relative;
+		padding: 0;
+		margin-left: calc((100% - 5 * (100%/6)) / 5);
+		width: 20.66666667%;
+		&:hover {
+			.um-dd-countdown-timer {
+				.um-dd-time-label {
+					font-size: 10px;
+				}
+				.um-dd-time-value {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	.product.product-item-photo {
+		padding: 2px;
+		display: block;
+		width: 100%;
+	}
+	.product-item-description {
+		display: none;
+	}
+	.um-dd-bundle-wrap {
+		background-color: #f4f4f4;
+		background-color: #f4f4f4;
+		margin-bottom: 20px;
+		margin-bottom: 20px;
+		.um-dd-save-dol {
+			padding: 6px 5px;
+			text-align: center;
+		}
+		.um-dd-save-per {
+			padding: 6px 5px;
+			text-align: center;
+		}
+	}
+	.um-dd-grouped-wrap {
+		.um-dd-save-dol {
+			padding: 6px 5px;
+			text-align: center;
+		}
+		.um-dd-save-per {
+			padding: 6px 5px;
+			text-align: center;
+		}
+	}
+	.product-item-details {
+		text-align: center;
+		overflow: visible;		
+	}
+}
+.dailydeals-deal-view {
+	.page-title-wrapper {
+		text-align: center;
+	}
+	.toolbar-products {
+		position: relative;
+		display: none;
+	}
+}
+.um-daily-deals-widget {
+	.page-title-wrapper {
+		text-align: center;
+	}
+	.product-item {
+		position: relative;
+	}
+}
+.products-grid {
+	.product-item {
+		position: relative;
+	}
+}
+#um-dailydeal-side-items {
+	.product-item {
+		position: relative;
+		padding: 0;
+		width: 100%;
+		margin: 0px;
+		display: initial;
+		.price-box {
+			margin: -8px 0 30px;
+		}
+		&:hover {
+			.um-dd-countdown-timer {
+				.um-dd-time-label {
+					font-size: 12px;
+					font-size: 12px;
+				}
+				.um-dd-time-value {
+					font-size: 16px;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+	.um-product-item-info {
+		position: relative;
+		margin-bottom: 40px;
+	}
+	.fa-arrow-circle-right {
+		color: #e1e1e1;
+		font-size: 35px;
+	}
+	.fa-arrow-circle-left {
+		color: #e1e1e1;
+		font-size: 35px;
+	}
+	.owl-prev {
+		width: 32px;
+		height: 32px;
+		margin: 0;
+		position: absolute;
+		top: 93%;
+		left: 75px;
+	}
+	.owl-next {
+		width: 32px;
+		height: 32px;
+		margin: 0;
+		position: absolute;
+		top: 93%;
+		right: 75px;
+	}
+	.owl-controls {
+		margin-top: 40px;
+	}
+	margin: 0px;
+	padding: 0px;
+	.product-item-info {
+		width: 240px;
+	}
+	.products-grid {
+		.product-item-inner {
+			background: #fff;
+			border: 0px solid #bbb;
+			border-top: none;
+			left: 0;
+			margin: 9px 0 0 -1px;
+			padding: 0 9px 9px;
+			position: initial;
+			right: -1px;
+			z-index: 2;
+		}
+	}
+	.product-item-photo {
+		float: left;
+		width: 100%;
+		text-align: center;
+	}
+	.product-image-container {
+		width: 50% !important;
+	}
+	.um-dd-save-wrap {
+		padding: 0px;
+		margin-top: 0px;
+	}
+	.um-dd-timer-label {
+		padding: 5px 0px;
+	}
+	.um-dd-countdown-timer {
+		.um-dd-timer-clock {
+			padding: 2px;
+		}
+		>.um-dd-timer-wrap {
+			padding: 0px;
+		}
+	}
+	.um-dd-wrap-other-items {
+		margin-top: 5px;
+	}
+	.um-dd-product-item-inner {
+		margin-top: 20px;
+	}
+}
+.um-dailydeal-title-block {
+	text-align: center;
+	padding: 5px;
+}
+.um-dailydeal-desc-block {
+	text-align: center;
+	padding: 10px;
+}
+.um-dd-discount {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	z-index: 1;
+	pointer-events: none;
+	.um-dd-discount-label {
+		position: absolute;
+		top: -12px;
+		right: -12px;
+		width: 82px;
+		height: 72px;
+		font-size: 16px;
+		border-radius: 50%;
+		background: #eb5757;
+		color: #fff;
+		.label {
+			position: absolute;
+			top: 15px;
+			left: 5px;
+		}
+		.percent {
+			display: block;
+			font-size: 20px;
+			line-height: 20px;
+			font-weight: bold;
+			>span {
+				vertical-align: super;
+				font-size: 15px;
+				font-weight: normal;
+			}
+		}
+	}
+}
+.um-side-view-all-deals {
+	text-align: center;
+	padding-bottom: 40px;
+	padding-top: 1px;
+	a {
+		text-decoration: none;
+		font-weight: 600;
+	}
+}
+.um-dailydeal-side-block-title {
+	font-size: 18px;
+	font-weight: 600;
+}
+.catalog-category-view {
+	.product-item-details {
+		text-align: center;
+	}
+	.product-item {
+		&:hover {
+			.um-dd-countdown-timer {
+				.um-dd-time-label {
+					font-size: 10px;
+				}
+				.um-dd-time-value {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+.um-daily-deals {
+	.price-final_price {
+		padding: 10px;
+		padding: 10px 5px;
+	}
+}
+.um-dd-save-wrap {
+	display: inline-flex;
+	padding: 5px;
+	background-color: #f4f4f4;
+}
+.um-dd-wrap-other-items {
+	margin-top: 10px;
+	text-align: center;
+	color: #333333;
+	background-color: #F4F4F4;
+}
+.um-special-price {
+	.price {
+		font-size: 22px;
+	}
+	padding: 2px 1px;
+}
+.um-dd-save-dol {
+	padding: 6px 5px;
+	font-weight: 700;
+}
+.um-dd-save-per {
+	padding: 6px 5px;
+	font-weight: 700;
+}
+.um-old-price {
+	padding: 2px 1px;
+}
+.um-dd-countdown-timer {
+	position: relative;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	font-family: Open Sans, sans-serif;
+	background-color: transparent;
+	padding-right: 0;
+	padding-left: 0;
+	background-color: #f4f4f4;
+	position: relative;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	font-family: Open Sans, sans-serif;
+	background-color: transparent;
+	padding-right: 0;
+	padding-left: 0;
+	>.um-dd-timer-wrap {
+		display: flex;
+		align-items: center;
+		flex: 1;
+		flex-wrap: wrap;
+		padding: 0px;
+	}
+	>div {
+		display: flex;
+		align-items: center;
+		flex: 1;
+		flex-wrap: wrap;
+		padding: .3125rem 0;
+		display: flex;
+		align-items: center;
+		flex: 1;
+		flex-wrap: wrap;
+		padding: .3125rem 0;
+	}
+	.um-dd-timer-clock {
+		background-color: white;
+		padding: 5px;
+		text-align: center;
+		border: 1px dashed #242424;
+		display: inherit;
+		color: #242424;
+		margin: 0 auto;
+	}
+	.um-dd-time {
+		position: relative;
+		display: inline-block;
+		width: 25%;
+		padding: .3125rem .9375rem;
+	}
+	.um-dd-time-value {
+		line-height: 20px;
+		font-size: 16px;
+		text-align: center;
+		display: block;
+		color: inherit;
+	}
+	.um-dd-time-label {
+		font-size: 12px;
+		line-height: 18px;
+		font-weight: 400;
+		text-align: center;
+		display: block;
+		color: inherit;
+	}
+	>.timer-wrap {
+		display: flex;
+		align-items: center;
+		flex: 1;
+		flex-wrap: wrap;
+		padding: .3125rem 0;
+	}
+	.timer-clock {
+		background-color: #242424;
+		padding: 0 .9375rem;
+		text-align: center;
+		border: 1px solid transparent;
+		display: inherit;
+		.time {
+			position: relative;
+			display: inline-block;
+			width: 25%;
+			padding: .3125rem .9375rem;
+		}
+		.time-value {
+			line-height: 20px;
+			font-size: 16px;
+			text-align: center;
+			display: block;
+			color: inherit;
+		}
+		.time-label {
+			font-size: 12px;
+			line-height: 18px;
+			font-weight: 400;
+			text-align: center;
+			display: block;
+			color: inherit;
+		}
+	}
+}
+.um-dd-timer-label {
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+	.fa-clock-o {
+		margin-right: 4px;
+	}
+}
+.catalog-product-view {
+	.um-dd-save-wrap {
+		font-size: 16px;
+	}
+	.um-dd-timer-label {
+		font-size: 16px;
+	}
+	.um-dd-countdown-timer {
+		.um-dd-timer-clock {
+			font-weight: 600;
+			width: 100%;
+		}
+	}
+	.um-dd-discount {
+		display: none;
+	}
+}
+.timer-label {
+	line-height: 1rem;
+	margin: 0 .625rem 0 1.25rem;
+	color: inherit;
+	width: 100%;
+	text-align: center;
+	font-size: 1.375rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-bottom: .125rem;
+	width: auto;
+}
+@media only screen and (max-width: 518px) and (min-width: 100px) {
+	.um-dd-countdown-timer {
+		.um-dd-time-label {
+			font-size: 10px;
+			text-transform: lowercase;
+		}
+		.um-dd-time-value {
+			font-size: 14px;
+			text-transform: lowercase;
+		}
+		.um-dd-timer-clock {
+			padding: 1px;
+			margin: 0 auto;
+		}
+		.um-dd-time {
+			padding: 5px;
+		}
+	}
+}
+@media only screen and (min-width: 100px) and (max-width: 767px) {
+	#um-dailydeal-items {
+		.product-item {
+			margin-left: 0;
+			width: 50%;
+			padding-left: 20px;
+		}
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1150px) {
+	#um-dailydeal-items {
+		.product-item {
+			margin-left: 0;
+			width: 33.33333333%;
+			padding-left: 20px;
+		}
+	}
+	.um-dd-countdown-timer {
+		.um-dd-time-label {
+			font-size: 10px;
+		}
+		.um-dd-time-value {
+			font-size: 14px;
+		}
+	}
+}

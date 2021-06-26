@@ -1,0 +1,35 @@
+<?php
+    $categories = $this->getCategoryCollection();
+    $categoryHelper = $this->getCategoryHelper();
+    $categoryMainID = $this->getCategoryParentUrl();
+?>
+<div class="widget block block-static-block cwiw inline col-4" id="">
+    <div class="block-content publications-item">
+        <div class="content-heading">
+            <h2 class="title"><?php echo $this->getMainTitle(); ?></h2>
+        </div>
+
+        <?php
+        foreach($categories as $category):
+            $cat = $this->getCategorymodel($category->getId());
+            $children = $cat->getChildrenCategories();
+            foreach ($children as $category):
+                $category = $this->getCategorymodel($category->getId());
+                $image_sub = $category->getImageUrl();
+                ?>
+                <div class="inline col-2 items">
+                    <a class="category_name" href="<?php echo $category->getUrl(); ?>">
+                <?php if($image_sub != null): ?>
+                        <img src="<?php echo $image_sub; ?>" class="img-responsive category_image" alt="<?php echo $category->getName(); ?>" />
+                <?php endif; ?>
+                        <h3><span><?php echo $category->getName(); ?></span></h3>
+                    </a>
+                </div>
+            <?php  endforeach;  ?>
+        <?php endforeach; ?>
+
+    </div>
+    <a href="<?php echo $categoryMainID ?>">view more</a>
+
+
+</div>
